@@ -7,3 +7,14 @@ export const Wrapper = styled.div`
   overflow-x: hidden;
   max-width: 100vw;
 `;
+
+export const Content = styled.div`
+  max-width: 1200px;
+  padding: 0rem 1rem;
+  margin: auto;
+  position: relative;
+
+  @media (min-width: 576px) {
+    padding: 0rem 3rem;
+  }
+`;
