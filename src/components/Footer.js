@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
-  padding: 1rem 0;
+  border-top: 1px solid #636363;
+  padding: 3rem 0;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
