@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Photo Portfolio!`,
-    description: `A demo photography portfolio website, built with Gatsby and headless Wordpress.`,
-    author: `@jonrutter`,
+    title: `Gatsby Photo Portfolio`,
+    description: `A demo photography portfolio website, built with Gatsby and headless WordPress.`,
+    author: `Jon Rutter`,
     // siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
