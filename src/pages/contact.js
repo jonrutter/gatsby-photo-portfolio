@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import Title from '../components/Title';
+import SEO from '../components/SEO';
 
 import { useContactQuery } from '../hooks/useContactInfoQuery';
 
@@ -57,26 +58,29 @@ const Contact = () => {
   const { address, email, name, telephone } = contactData.wpPage.Contact_Info;
   const picture = getImage(contactData.wpPage.Contact_Info.picture.localFile);
   return (
-    <Layout>
-      <Wrapper>
-        <Title>{title}</Title>
-        <Content>
-          <Col>
-            <ul>
-              <Item>{name}</Item>
-              <Item>{email}</Item>
-              <Item>{telephone}</Item>
-              <Item>
-                <address dangerouslySetInnerHTML={{ __html: address }} />
-              </Item>
-            </ul>
-          </Col>
-          <Col>
-            <ProfilePicture image={picture} alt="Profile picture" />
-          </Col>
-        </Content>
-      </Wrapper>
-    </Layout>
+    <>
+      <SEO title="Contact" />
+      <Layout>
+        <Wrapper>
+          <Title>{title}</Title>
+          <Content>
+            <Col>
+              <ul>
+                <Item>{name}</Item>
+                <Item>{email}</Item>
+                <Item>{telephone}</Item>
+                <Item>
+                  <address dangerouslySetInnerHTML={{ __html: address }} />
+                </Item>
+              </ul>
+            </Col>
+            <Col>
+              <ProfilePicture image={picture} alt="Profile picture" />
+            </Col>
+          </Content>
+        </Wrapper>
+      </Layout>
+    </>
   );
 };
 

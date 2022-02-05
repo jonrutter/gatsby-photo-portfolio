@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import HomeLayout from '../components/Layout/HomeLayout';
+import SEO from '../components/SEO';
 
 const Wrapper = styled.main`
   padding: 1rem;
@@ -32,12 +33,15 @@ const Subtitle = styled.h2`
 
 const IndexPage = () => {
   return (
-    <HomeLayout>
-      <Wrapper>
-        <Title>Lorem Ipsum</Title>
-        <Subtitle>Photography</Subtitle>
-      </Wrapper>
-    </HomeLayout>
+    <>
+      <SEO title="Home" />
+      <HomeLayout>
+        <Wrapper>
+          <Title>Lorem Ipsum</Title>
+          <Subtitle>Photography</Subtitle>
+        </Wrapper>
+      </HomeLayout>
+    </>
   );
 };
 
