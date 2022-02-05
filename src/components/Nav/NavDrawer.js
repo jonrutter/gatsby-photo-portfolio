@@ -22,7 +22,7 @@ const NavDrawer = ({ open, closeNav }) => {
 
   const listContent = links.map(({ id, label, path }) => (
     <NavItem key={id}>
-      <NavLink to={path} tabIndex={open ? '0' : '-1'}>
+      <NavLink to={path} tabIndex={open ? '0' : '-1'} onClick={closeNav}>
         {label}
       </NavLink>
     </NavItem>
