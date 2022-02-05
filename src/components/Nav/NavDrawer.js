@@ -31,7 +31,7 @@ const NavDrawer = ({ open, closeNav }) => {
   return (
     <>
       <ClickAwayListener open={open} onClick={closeNav} />
-      <NavDrawerWrapper open={open} aria-hidden={!!open}>
+      <NavDrawerWrapper open={open} aria-hidden={!open}>
         <NavClose
           tabIndex={open ? '0' : '-1'}
           onClick={closeNav}

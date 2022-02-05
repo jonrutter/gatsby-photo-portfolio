@@ -16,7 +16,7 @@ const Nav = ({ home }) => {
   const toggleNav = () => setOpen((open) => !open);
   return (
     <>
-      <Wrapper>
+      <Wrapper home={home}>
         <NavOpen
           onClick={toggleNav}
           aria-label="open menu"

@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
-  position: fixed;
+  position: ${({ home }) => (home ? 'fixed' : 'relative')};
   top: 0;
   right: 0;
-  padding: 8rem 1rem 2rem;
+  ${'' /* padding: 8rem 1rem 2rem; */}
 `;
 
 export const NavToggle = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  color: black;
+  color: #000;
   font-size: 1.5rem;
   padding: 0.75rem;
-  margin: 1rem;
+  ${'' /* margin: 1rem; */}
   transition: all 0.2s;
   border: 1px solid transparent;
 
@@ -42,8 +42,10 @@ export const NavToggle = styled.button`
 `;
 
 export const NavOpen = styled(NavToggle)`
+  position: ${({ home }) => (home ? 'absolute' : 'relative')};
   border-color: ${({ home }) => (home ? '#fff' : '#000')};
   color: ${({ home }) => (home ? '#fff' : '#000')};
+  margin: ${({ home }) => (home ? '1rem 1rem 0 0' : '0')};
 
   & > svg {
     z-index: 3;
@@ -66,6 +68,8 @@ export const NavOpen = styled(NavToggle)`
 export const NavClose = styled(NavToggle)`
   border-color: #000;
   color: #000;
+  margin-right: 1rem;
+  margin-top: 1rem;
 
   & > svg {
     z-index: 12;
