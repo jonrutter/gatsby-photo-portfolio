@@ -32,19 +32,19 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-appearance: none;
   }
 
-  a {
-    -webkit-tap-highlight-color: transparent;
-  }
-
   a,
   button {
     background-color: transparent;
   }
 
-  a,
-  a:hover {
+  a {
     color: inherit;
     font-size: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:hover {
     text-decoration: none;
   }
 
